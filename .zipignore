@@ -1,0 +1,6 @@
+zipproj.btm 
+\*.zip
+\*.err
+*bkup/\*
+*node_modules/\*
+test/\*

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Romantic Dinner Menu</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great Vibes">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant Upright">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant">
+   <link href="romanticdinner.css" rel="stylesheet">
+   <link rel="stylesheet" href="chosen/chosen.css">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+   <script src="chosen/chosen.jquery.js" type="text/javascript"></script>
+   <script src="romanticdinner.js"></script>
+</head>
+<body>
+   <div class="container">
+      <header>
+         <img src="images/logo.png" alt="logo" />
+      </header>
+      <div class="content-area">
+         <div class="spinner"></div>
+         <form>
+            <div id="home" data-title="Home" class="content" >
+               <h1>Romantic Dinner for Two Menu Options</h1>
+               <h3>Practice Social Distancing in Style With an On-Site Private and Intimate Dinner</h3>
+               <h4>Take Home Options Also Available</h4>
+               <div class="info">
+                  <p>Use this web form to make your menu selections for 2 guests. Enter your names in the fields below and click the 'Next' button at the bottom of the page</p>
+               </div>
+               <div class="inputs">
+                  <h2>Guest Names</h2>
+                  <input type="text" class="guest1" name="guest1" size=30 placeholder="Guest Name #1" />
+                  <input type="text" class="guest2" name="guest2" size=30 placeholder="Guest Name #2" />
+               </div>
+               <div class="buttons">
+                  <span>
+                     <button type="button" class="next" disabled>Next &gt;</button>
+                  </span>
+               </div>
+            </div>
+            <div id="choices1" data-title="Menu Choices" class="content">
+               <h1>Romantic Dinner for Two Menu Options</h1>
+               <h3>Please make menu selections for <span class="guest1">Guest #1</span></h3>
+               <div class="inputs">
+                  <h2>Salad</h2>
+                  <select name="saladchoice1"     class="Salad"    ></select>
+                  <h2>Entree</h2>
+                  <select name="entreechoice1"    class="Entree"   ></select>
+                  <h2>Starch</h2>
+                  <select name="starchchoice1"    class="Starch"   ></select>
+                  <h2>Vegetable</h2>
+                  <select name="vegetablechoice1" class="Vegetable"></select>
+                  <h2>Dessert</h2>
+                  <select name="dessertchoice1"   class="Dessert"  ></select>
+               </div>
+               <div class="buttons">
+                  <button type="button" class="prev">&lt; Prev</button>
+                  <button type="button" class="next" disabled>Next &gt;</button>
+               </div>
+            </div>
+            <div id="choices2" data-title="Menu Choices" class="content">
+               <h1>Romantic Dinner for Two Menu Options</h1>
+               <h3>Please make menu selections for <span class="guest2">Guest #2<span></h3>
+               <div class="inputs">
+                  <h2>Salad</h2>
+                  <select name="saladchoice2"     class="Salad"    ></select>
+                  <h2>Entree</h2>
+                  <select name="entreechoice2"    class="Entree"   ></select>
+                  <h2>Starch</h2>
+                  <select name="starchchoice2"    class="Starch"   ></select>
+                  <h2>Vegetable</h2>
+                  <select name="vegetablechoice2" class="Vegetable"></select>
+                  <h2>Dessert</h2>
+                  <select name="dessertchoice2"   class="Dessert"  ></select>
+               </div>
+               <div class="buttons">
+                  <button type="button" class="prev">&lt; Prev</button>
+                  <button type="button" class="next" disabled>Next &gt;</button>
+               </div>
+            </div>
+            <div id="go" data-title="Cover Letter Info" class="content">
+               <h1>Romantic Dinner for Two Menu Options</h1>
+               <div class="narrow">
+                  <h3>All Romantic Dinners come with a carafe of water and tea (sweet or unsweetened) and 1 glass of wine per guest.</h3>
+                  <h3>A selection of organic, small-batch wines provided by JF Wine Imports are available for purchase by the bottle.</h3>
+                  <br><br><br>
+                  <p>You can use the 'Prev' and 'Next' to review your selections.<p>
+                  <p>When you are done, click the 'Submit' button.
+               </div>
+               <br>
+               <div class="buttons">
+                  <button type="button" class="prev">&lt; Prev</button>
+                  <button type="submit" class="submit">Submit</button>
+               </div>
+            </div>
+            <div id="final" data-title="Cover Letter Info" class="content">
+               <h1>Romantic Dinner for Two Menu Options</h1>
+               <div class="narrow">
+                  <h3>Your selections have successfully been submitted</h3>
+                  <h3>Thank you for doing business with us!</h3>
+                  <h3>Bla... bla... bla...</h3>
+                  <br><br><br>
+                  <p><a href="https://sweetwaterinn.com/">Sweetwater Branch Inn</a><p>
+               </div>
+               <br>
+            </div>
+         </form>
+      </div>
+   </div>
+</body>
+</html>

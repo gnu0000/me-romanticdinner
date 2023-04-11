@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Manage Romantic Dinner Menu's</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="manage.css?i=1" rel="stylesheet">
+   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.js"></script>
+   <script src="manage.js"></script>
+</head>
+<body>
+   <template id="menurow">
+      <tr data-rowid="{id}">
+         <td>{date}</td>
+         <td>{label}</td>
+         <td><img src="../images/delete.png" /></td>
+      </tr>
+   </template>
+   <template id="menudetails">
+      <h2>Dinner for {guest1} & {guest2}</h2>
+      <h3>Salads</h3>
+      <p>{saladchoice1}</p>
+      <p>{saladchoice2}</p>
+      <h3>Entrees</h3>
+      <p>{entreechoice1}</p>
+      <p>{entreechoice2}</p>
+      <h3>Starches</h3>
+      <p>{starchchoice1}</p>
+      <p>{starchchoice2}</p>
+      <h3>Vegetables</h3>
+      <p>{vegetablechoice1}</p>
+      <p>{vegetablechoice2}</p>
+      <h3>Desserts</h3>
+      <p>{dessertchoice1}</p>
+      <p>{dessertchoice2}</p>
+   </template>
+   <template id="edititems">
+      <div class="items" data-group="{groupName}">
+         <h2><img src="../images/add.png"><span>{groupName}</span></h2>
+      </div>
+   </template>
+   <template id="edititem">
+      <div class="item" data-itemid="{id}">
+         <img src="../images/edit.png">
+         <img src="../images/delete.png">
+         <span>{description}</span>
+      </div>
+   </template>
+   <template id="editform">
+      <div class="editform" data-id="{id}" data-group="{group}">
+         <textarea rows="3" placeholder="description" >{desc}</textarea>
+         <div class="buttons">
+            <button class="saveform">Save</button>
+            <button class="cancelform">Cancel</button>
+         </div>
+      </div>
+   </template>
+   <div class="container">
+      <header>
+         <img src="../images/logo2.png" class="logo" alt="logo" />
+         <h1>Manage Romantic Dinner Menu's</h1>
+         <ul>
+            <li id="editlink" >Edit Items</li>
+            <li id="aboutlink">About</li>
+         </ul>
+      </header>
+      <div class="content-area">
+         <div class="spinner"></div>
+
+         <div id="menus" data-title="Menu List" class="content visible">
+            <table>
+               <thead>
+                  <tr>
+                     <th>Date</th>
+                     <th>Participants</th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <tbody>
+               </tbody>
+            </table>
+         </div>
+
+         <div id="menu" data-title="Menu" class="content hidden">
+            <div class="buttons">
+               <button class="back" >Back</button>
+               <button class="print">Print</button>
+            </div>
+            <div class="details">
+               <h3>menu goes here</h3>
+            </div>
+         </div>
+
+         <div id="items" data-title="Items" class="content hidden">
+            <h2>Edit Items</h2>
+            <div class="editarea"></div>
+         </div>
+
+         <div id="about" data-title="About" class="content hidden">
+            <h2>About</h2>
+            <h3>Romantic Menu Generator v0.10</h3>
+            <p>
+            This app was build in-house.
+            If there are problems or we need changes,
+            contact Cornelia Holbrook or Craig Fitzgerald
+            </p>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

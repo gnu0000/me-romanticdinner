@@ -1,0 +1,283 @@
+html, body { 
+   height: 100%;
+   border: 0;
+   margin: 0;
+   font-family: Cormorant,serif;
+   font-weight: 600;
+   background-color: #e8e8e8;
+   background-image: url("images/background.jpg");
+}
+
+header img { 
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 0.5rem;
+}
+
+.content {
+   padding: 1.5em;
+}
+
+.hiddenwafen {
+    display: none;
+}
+
+.content.visible {
+}
+
+.container {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.content-area {
+   flex: 1;
+   overflow: auto;
+}
+
+h1 {
+   font-size: 3rem;
+   text-transform: none;
+   font-weight: 600;
+   font-family: Great Vibes,serif;
+   text-align: center;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+h2 {
+   font-size: 2rem;
+/*   margin-bottom: 1em;  */
+   font-family: Great Vibes,serif;
+   text-align: center;
+   margin-bottom: 0;
+   margin-top: 1em;
+}
+
+h3 {
+   font-size: 1.35rem;
+/*   margin-bottom: 1rem; */
+   font-family: Cormorant Upright,serif;
+   font-style: oblique 50deg;
+   text-align: center;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+h4 {
+   font-size: 1rem;
+   -webkit-margin-after: 0.4em;
+   font-family: Cormorant Upright,serif;
+   font-style: oblique 50deg;
+   text-align: center;
+   margin-top: 0;
+}
+
+.info {
+   padding: 0 5rem;
+   text-align: center;
+   max-width: 50rem;
+   margin-left:auto;
+   margin-right:auto;
+
+}
+
+h3 span {
+   text-decoration: underline;
+   font-weight: bold;
+}
+
+.narrow {
+   max-width: 29rem;
+   margin-left:auto;
+   margin-right:auto;
+   text-align: center;
+}
+
+.narrow p {
+   display: block;
+   width:auto;
+   margin-left:auto;
+   margin-right:auto;
+}
+
+
+.inputs {
+   width: 100%;
+}
+
+select, input[type='text'] {
+   display: block;
+   margin-left:auto;
+   margin-right:auto;
+   margin-top: .5rem;
+   margin-bottom: .5rem;
+   padding: 4px;
+}
+
+
+select {
+   width: 80%;
+   margin-left: 10%;
+   max-width: 40rem;
+}
+
+.buttons {
+   margin-top: 2rem;
+   text-align: center;
+}
+
+#go .buttons {
+   margin-top: 0;
+}
+
+.buttons span {
+   display: inline-block;
+   margin-left:auto;
+   margin-right:auto;
+}
+
+/***** styles for choice plugin ***/
+
+.chosen-drop .chosen-results li.group-result {
+   font-family: Great Vibes,serif;
+   font-size: 1.5rem;
+   line-height: 1.6rem;
+}
+.chosen-drop .chosen-results li.active-result {
+   font-family: Cormorant,serif;
+   font-size: 1.15rem;
+   line-height: 1.2rem;
+}
+
+div.chosen-container {
+   width: 80%;
+   margin-left: 10%;
+/*   max-width: 60rem; */
+}
+
+.chosen-single {
+   font-size: 1.25em;
+   height: 1.5rem;
+}
+
+
+
+/*
+input[type='submit'], input[type='button'] {
+   font-size: 1.1em;
+   font-weight: bold;
+   color: white;
+   background: #4b7681;
+   border-radius: 7px;
+   padding: 4px 8px;
+}
+*/
+
+footer{
+   text-align: center;
+   background: white;
+   min-height: 4em;
+}
+
+button {
+   font-size: 1.1em;
+   font-weight: bold;
+   color: white;
+   background: #4b7681;
+   border-radius: 7px;
+   padding: 6px 15px;
+   margin: 10px 20px;
+}
+
+button:disabled,
+button[disabled] {
+   background: #AAA;
+}
+
+footer button:disabled {
+   opacity: 0.45;
+}
+
+footer button:focus {
+   outline: none;
+}
+
+#reset {
+   float: left;
+}
+
+#generate {
+   float: right;
+}
+
+.label {
+   font-weight:bold; 
+   text-align:right; 
+   padding-left:1.5em;
+   padding-right:0.5em;
+   color: #333;
+}
+
+.note {
+   font-size: 7pt;
+}
+
+.checkboxes {
+   text-align: center;
+   margin-top: 2em;
+}
+.checkboxes > div {
+   text-align: left;
+   display: inline-block;
+}
+
+.checkboxes > div label {
+   display: block;
+   cursor: pointer;
+}
+
+.spinner {
+   display: inline-block;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 100px;
+   height: 100px;
+   border: 10px solid rgba(220,220,220,0.35);
+   border-top: 10px solid #5B89B5;
+   margin: -60px;
+   background-clip: content-box;
+   border-radius: 50%;
+   animation: spin 1.25s linear infinite;
+   z-index: 99;
+}
+
+@keyframes spin {
+  0%   {transform: rotate(0deg)  }
+  100% {transform: rotate(360deg)}
+}
+
+
+
+@media screen and (max-width: 480px) {
+   header img { 
+      zoom: .75;
+   }
+   h1 {
+      font-size: 2rem;
+   }
+   h2 {
+      margin-top: 0.35rem;
+   }
+   h3 {
+      font-size: 1.25rem;
+   }
+   .info {
+      padding: 2rem;
+   }
+
+}

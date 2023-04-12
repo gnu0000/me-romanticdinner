@@ -71,7 +71,9 @@ sub DeleteItem {
 sub GetMenus {
    my ($id, $params, $resource) = @_;
 
-   my $sql = "select *, CONCAT(DATE_FORMAT(created, '%m/%d/%Y '), TIME_FORMAT(created, '%l:%i %p')) as date ".
+   my $sql = "select *, ".
+             "  DATE_FORMAT(created, '%m/%d/%Y ') as date , ".
+             "  TIME_FORMAT(created, '%l:%i %p' ) as time ".
              "from menu ".
              "where archived=0 ".
              "order by created desc";

@@ -15,27 +15,29 @@
    <template id="menurow">
       <tr data-rowid="{id}">
          <td>{date}<span>{time}</span></td>
+         <td>{eventdate}<span> {eventtime}</span></td>
          <td>{label}</td>
          <td><img src="../images/delete.png" /></td>
       </tr>
    </template>
    <template id="menudetails">
-      <h2>Dinner for {guest1} & {guest2}</h2>
+      <h2 class="ct">Dinner for {guest1} & {guest2}</h2>
+      <div class="ct">{eventdate} {eventtime}</div>
       <h3>Salads</h3>
-      <p>Person 1: {saladchoice1}</p>
-      <p>Person 2: {saladchoice2}</p>
+      <p>{guest1}: {saladchoice1}</p>
+      <p>{guest2}: {saladchoice2}</p>
       <h3>Entrees</h3>
-      <p>Person 1: {entreechoice1}</p>
-      <p>Person 2: {entreechoice2}</p>
+      <p>{guest1}: {entreechoice1}</p>
+      <p>{guest2}: {entreechoice2}</p>
       <h3>Starches</h3>
-      <p>Person 1: {starchchoice1}</p>
-      <p>Person 2: {starchchoice2}</p>
+      <p>{guest1}: {starchchoice1}</p>
+      <p>{guest2}: {starchchoice2}</p>
       <h3>Vegetables</h3>
-      <p>Person 1: {vegetablechoice1}</p>
-      <p>Person 2: {vegetablechoice2}</p>
+      <p>{guest1}: {vegetablechoice1}</p>
+      <p>{guest2}: {vegetablechoice2}</p>
       <h3>Desserts</h3>
-      <p>Person 1: {dessertchoice1}</p>
-      <p>Person 2: {dessertchoice2}</p>
+      <p>{guest1}: {dessertchoice1}</p>
+      <p>{guest2}: {dessertchoice2}</p>
    </template>
    <template id="edititems">
       <div class="items" data-group="{groupName}">
@@ -74,7 +76,8 @@
             <table>
                <thead>
                   <tr>
-                     <th>Date</th>
+                     <th>Create Date</th>
+                     <th>Event Date</th>
                      <th>Participants</th>
                      <th></th>
                   </tr>

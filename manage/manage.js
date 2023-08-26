@@ -42,8 +42,8 @@ class PageHandler {
    }
 
    InitEvents() {
-      $("#menus tbody").on("click", "td:nth-child(1), td:nth-child(2)", (e)=>this.MenuSelected(e));
-      $("#menus tbody").on("click", "td:nth-child(3)", (e)=>this.DeleteMenu(e));
+      $("#menus tbody").on("click", "td:nth-child(1), td:nth-child(2), td:nth-child(3)", (e)=>this.MenuSelected(e));
+      $("#menus tbody").on("click", "td:nth-child(4)", (e)=>this.DeleteMenu(e));
       $("button.back" ).on("click", ()=>{this.ShowPage("menus")});
       $("button.print").on("click", ()=>{window.print();return false;});
       $(".logo"       ).on("click", ()=>{this.ShowPage("menus")});
@@ -108,6 +108,9 @@ class PageHandler {
       let parent = $("#menus tbody");
       parent.empty();
       for (let menu of this.menus) {
+         let data = JSON.parse(menu.data);
+         menu.eventdate = data.date;
+         menu.eventtime = data.time;
          parent.append(this.Template("menurow", menu));
       }
    }

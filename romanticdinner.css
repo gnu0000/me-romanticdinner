@@ -109,7 +109,7 @@ h3 span {
    width: 100%;
 }
 
-select, input[type='text'] {
+select, input[type='text'], input[type='date'], input[type='time'] {
    display: block;
    margin-left:auto;
    margin-right:auto;
@@ -273,11 +273,16 @@ footer button:focus {
    h2 {
       margin-top: 0.35rem;
    }
+   h2.gap {
+      margin-top: 1.35rem;
+   }
+
    h3 {
       font-size: 1.25rem;
    }
    .info {
       padding: 2rem;
+      padding-bottom: 1rem;
    }
 
 }

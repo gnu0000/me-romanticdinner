@@ -137,12 +137,12 @@ tbody tr:hover {
 }
 
 #menus table th {
-   font-size: 1.5rem;
+   font-size: 1.35rem;
    font-weight: bold;
 }
 
 #menus table td {
-   font-size: 1.25rem;
+   font-size: 1.15rem;
    cursor: pointer;
 }
 
@@ -150,7 +150,11 @@ tbody tr:hover {
    width: 13rem
 }
 
-#menus table td:nth-child(3) {
+#menus table td:nth-child(2) {
+   width: 13rem
+}
+
+#menus table td:nth-child(4) {
    width: 1rem;
    text-align: right;
 }
@@ -191,6 +195,10 @@ tbody tr:hover {
 
 #items .item span {
    padding-left: 5px;
+}
+
+.ct {
+   text-align: center;
 }
 
 
@@ -331,11 +339,11 @@ button[disabled] {
    #menus table td {
       font-size: 1rem;
    }
-   #menus table td:nth-child(1) {
+   #menus table td:nth-child(1), #menus table td:nth-child(2) {
       width: 4.75rem;
       font-size: 0.8rem;
    }
-   #menus table td:nth-child(1) span {
+   #menus table td:nth-child(1) span, #menus table td:nth-child(2) span {
       display: none;
    }
 

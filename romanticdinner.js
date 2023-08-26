@@ -38,7 +38,7 @@ class PageHandler {
    InitEvents() {
       $(".next").click(()=> this.NextPage());
       $(".prev").click(()=> this.PrevPage());
-      $("input[type='text']").on("input", ()=> this.NameChange());
+      $("input[type='text'], input[type='date'], input[type='time']").on("input", ()=> this.NameChange());
       $("select").on("change", (e)=> this.SelectChange(e));
       $("form").submit((e)=> this.DoSubmit(e));
       $("header img").click(()=>{this.ShowPage("home")});
@@ -56,9 +56,11 @@ class PageHandler {
    NameChange() {
       let guest1 = $("input.guest1").val().replace(/</g, "&lt;").replace(/>/g, "&gt;");
       let guest2 = $("input.guest2").val().replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      let date   = $("input.date").val();
+      let time   = $("input.time").val();
       $("span.guest1").text(guest1);
       $("span.guest2").text(guest2);
-      $("#home button").disableIt(!(guest1 && guest2));
+      $("#home button").disableIt(!(guest1 && guest2 && date && time));
    }
 
    SelectChange(e) {
@@ -118,6 +120,13 @@ class PageHandler {
       $("select,input").each((i, el)=>{
          data[el.name] = el.value;
       });
+
+      // reformat the date and time strings
+      let d = new Date(`${data.date} ${data.time}`);
+      data.date = d.toLocaleDateString("en-US");
+      var [z,hm,p] = d.toLocaleTimeString("en-US").match(/^(\d+:\d+):\d+ (.*)$/);
+      data.time = `${hm} ${p}`;
+
       let body = JSON.stringify(data);
       let headers = {'Accept': 'application/json', 'Content-Type': 'application/json'};
       let response = await fetch(`${this.dataUrl}/menus`, {method:"post", headers, body});
